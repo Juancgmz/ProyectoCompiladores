@@ -4,22 +4,22 @@
 */
 %}
 
-INTt		num
-RELt		real
-BOLt		bool
-CARt		car
-CADt		cad
-LSTt		lista
+INTt	num
+RELt	real
+BOLt	bool
+CARt	car
+CADt	cad
+LST		lista
 SIS		si
 SIN		sino
-MNTS		mientras
+MNTS	mientras
 HAZ		haz
 DSD		desde
 HST		hasta
-MSTR		muestra
+MSTR	muestra
 LEE		leer
 GRP		grupo
-NULL		null
+NULL	null
 
 %{
 /*
@@ -27,7 +27,7 @@ NULL		null
 */
 %}
 
-BOL		[0|1]
+BOL		[true|false]
 INT		[0-9]+
 REL		((\+|-)?([0-9]+)(\.[0-9]+)?)|((\+|-)?\.?[0-9]+)
 CAR		[a-z|A-Z]
@@ -52,17 +52,17 @@ CMP		(\=\=)
 DIF		(\<\>)
 ASG		(\=)
 PYC		(\;)
-ABRP		(\()
-CIEP		(\))
-ABLL		(\{)
-CILL		(\})
-ABRC		(\[)
-CIEC		(\])
-COMA		(\,)
+ABRP	(\()
+CIEP	(\))
+ABLL	(\{)
+CILL	(\})
+ABRC	(\[)
+CIEC	(\])
+COMA	(\,)
 AND		(\&)
 OR		[\?]
 NOT		(\!)
-COMM		(\/\*)
+COMM	(\#)
 
 %%
 
@@ -71,7 +71,7 @@ COMM		(\/\*)
 {BOLt}		printf("\nBOLt:%s\n",yytext);
 {CARt}		printf("\nCARt:%s\n",yytext);
 {CADt}		printf("\nCADt:%s\n",yytext);
-{LSTt}		printf("\nLSTt:%s\n",yytext);
+{LST}		printf("\nLST:%s\n",yytext);
 {SIS}		printf("\nSIS:%s\n",yytext);
 {SIN}		printf("\nSIN:%s\n",yytext);
 {MNTS}		printf("\nMNTS:%s\n",yytext);
