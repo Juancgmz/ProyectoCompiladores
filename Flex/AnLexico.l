@@ -27,7 +27,8 @@ NULL	null
 */
 %}
 
-BOL		[true|false]
+ID		[a-z|A-Z]([a-z|A-Z]+|[\d]+)+
+BOL		[0|1]
 INT		[0-9]+
 REL		((\+|-)?([0-9]+)(\.[0-9]+)?)|((\+|-)?\.?[0-9]+)
 CAR		[a-z|A-Z]
@@ -63,6 +64,7 @@ AND		(\&)
 OR		[\?]
 NOT		(\!)
 COMM	(\#)
+PNT		(\.)
 
 %%
 
@@ -83,6 +85,7 @@ COMM	(\#)
 {GRP}		printf("\nGRP:%s\n",yytext);
 {NULL}		printf("\nNULL:%s\n",yytext);
 
+{ID}		printf("\nID:%s\n",yytext);
 {INT}		printf("\nINT:%s\n",yytext);
 {REL}		printf("\nREL:%s\n",yytext);
 {BOL}		printf("\nBOL:%s\n",yytext);
@@ -114,6 +117,7 @@ COMM	(\#)
 {OR}		printf("\nOR:%s\n",yytext);
 {NOT}		printf("\nNOT:%s\n",yytext);
 {COMM}		printf("\nCOMM:%s\n",yytext);
+{PNT}		printf("\nPNT:%s\n",yytext);
 
 %%
 
