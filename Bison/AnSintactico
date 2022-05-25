@@ -1,0 +1,13 @@
+%{
+#include<stdio.h>
+%}
+
+%union{int dval; char cval; bool bval;}
+%token <dval> INT
+%token MAS POR PA PC
+%left 
+
+%%
+
+
+%%

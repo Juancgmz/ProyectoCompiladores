@@ -698,242 +698,242 @@ do_action:	/* This label is used only to access EOF actions. */
 case 1:
 YY_RULE_SETUP
 #line 71 "AnLexico.l"
-printf("\nINTt:%s\n",yytext);
+{ return(INTt); }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
 #line 72 "AnLexico.l"
-printf("\nRELt:%s\n",yytext);
+{ return(RELt); }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
 #line 73 "AnLexico.l"
-printf("\nBOLt:%s\n",yytext);
+{ return(BOLt); }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
 #line 74 "AnLexico.l"
-printf("\nCARt:%s\n",yytext);
+{ return(CARt); }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
 #line 75 "AnLexico.l"
-printf("\nCADt:%s\n",yytext);
+{ return(CADt); }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
 #line 76 "AnLexico.l"
-printf("\nLST:%s\n",yytext);
+{ return(LST); }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
 #line 77 "AnLexico.l"
-printf("\nSIS:%s\n",yytext);
+{ return(SIS); }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
 #line 78 "AnLexico.l"
-printf("\nSIN:%s\n",yytext);
+{ return(SIN); }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
 #line 79 "AnLexico.l"
-printf("\nMNTS:%s\n",yytext);
+{ return(MNTS); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
 #line 80 "AnLexico.l"
-printf("\nHAZ:%s\n",yytext);
+{ return(HAZ); }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
 #line 81 "AnLexico.l"
-printf("\nDSD:%s\n",yytext);
+{ return(DSD); }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
 #line 82 "AnLexico.l"
-printf("\nHST:%s\n",yytext);
+{ return(HST); }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
 #line 83 "AnLexico.l"
-printf("\nMSTR:%s\n",yytext);
+{ return(MSTR); }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
 #line 84 "AnLexico.l"
-printf("\nLEE:%s\n",yytext);
+{ return(LEE); }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
 #line 85 "AnLexico.l"
-printf("\nGRP:%s\n",yytext);
+{ return(GRP); }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
 #line 86 "AnLexico.l"
-printf("\nNULL:%s\n",yytext);
+{ return(NULL); }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
 #line 88 "AnLexico.l"
-printf("\nID:%s\n",yytext);
+{ return(ID); }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
 #line 89 "AnLexico.l"
-printf("\nINT:%s\n",yytext);
+{ return(INT); }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
 #line 90 "AnLexico.l"
-printf("\nREL:%s\n",yytext);
+{ return(REL); }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
 #line 91 "AnLexico.l"
-printf("\nBOL:%s\n",yytext);
+{ return(BOL); }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
 #line 92 "AnLexico.l"
-printf("\nCAR:%s\n",yytext);
+{ return(CAR); }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
 #line 93 "AnLexico.l"
-printf("\nCAD:%s\n",yytext);
+{ return(CAD); }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
 #line 95 "AnLexico.l"
-printf("\nMAS:%s\n",yytext);
+{ return(MAS); }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
 #line 96 "AnLexico.l"
-printf("\nMNS:%s\n",yytext);
+{ return(MNS); }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
 #line 97 "AnLexico.l"
-printf("\nMLT:%s\n",yytext);
+{ return(MLT); }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
 #line 98 "AnLexico.l"
-printf("\nDIV:%s\n",yytext);
+{ return(DIV); }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
 #line 99 "AnLexico.l"
-printf("\nRES:%s\n",yytext);
+{ return(RES); }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
 #line 100 "AnLexico.l"
-printf("\nPOT:%s\n",yytext);
+{ return(POT); }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
 #line 101 "AnLexico.l"
-printf("\nMNR:%s\n",yytext);
+{ return(MNR); }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
 #line 102 "AnLexico.l"
-printf("\nMNG:%s\n",yytext);
+{ return(MNG); }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
 #line 103 "AnLexico.l"
-printf("\nMYR:%s\n",yytext);
+{ return(MYR); }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
 #line 104 "AnLexico.l"
-printf("\nMYG:%s\n",yytext);
+{ return(MYG); }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
 #line 105 "AnLexico.l"
-printf("\nCMP:%s\n",yytext);
+{ return(CMP); }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
 #line 106 "AnLexico.l"
-printf("\nDIF:%s\n",yytext);
+{ return(DIF); }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
 #line 107 "AnLexico.l"
-printf("\nASG:%s\n",yytext);
+{ return(ASG); }
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
 #line 108 "AnLexico.l"
-printf("\nPYC:%s\n",yytext);
+{ return(PYC); }
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
 #line 109 "AnLexico.l"
-printf("\nABRP:%s\n",yytext);
+{ return(ABRP); }
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
 #line 110 "AnLexico.l"
-printf("\nCIEP:%s\n",yytext);
+{ return(CIEP); }
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
 #line 111 "AnLexico.l"
-printf("\nABLL:%s\n",yytext);
+{ return(ABLL); }
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
 #line 112 "AnLexico.l"
-printf("\nCILL:%s\n",yytext);
+{ return(CILL); }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
 #line 113 "AnLexico.l"
-printf("\nABRC:%s\n",yytext);
+{ return(ABRC); }
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
 #line 114 "AnLexico.l"
-printf("\nCIEC:%s\n",yytext);
+{ return(CIEC); }
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
 #line 115 "AnLexico.l"
-printf("\nCOMA:%s\n",yytext);
+{ return(COMA); }
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
 #line 116 "AnLexico.l"
-printf("\nAND:%s\n",yytext);
+{ return(AND); }
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
 #line 117 "AnLexico.l"
-printf("\nOR:%s\n",yytext);
+{ return(OR); }
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
 #line 118 "AnLexico.l"
-printf("\nNOT:%s\n",yytext);
+{ return(NOT); }
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
 #line 119 "AnLexico.l"
-printf("\nCOMM:%s\n",yytext);
+{ return(COMM); }
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
 #line 120 "AnLexico.l"
-printf("\nPNT:%s\n",yytext);
+{ return(PNT); }
 	YY_BREAK
 case 49:
 YY_RULE_SETUP

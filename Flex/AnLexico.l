@@ -68,56 +68,56 @@ PNT		(\.)
 
 %%
 
-{INTt}		printf("\nINTt:%s\n",yytext);
-{RELt}		printf("\nRELt:%s\n",yytext);
-{BOLt}		printf("\nBOLt:%s\n",yytext);
-{CARt}		printf("\nCARt:%s\n",yytext);
-{CADt}		printf("\nCADt:%s\n",yytext);
-{LST}		printf("\nLST:%s\n",yytext);
-{SIS}		printf("\nSIS:%s\n",yytext);
-{SIN}		printf("\nSIN:%s\n",yytext);
-{MNTS}		printf("\nMNTS:%s\n",yytext);
-{HAZ}		printf("\nHAZ:%s\n",yytext);
-{DSD}		printf("\nDSD:%s\n",yytext);
-{HST}		printf("\nHST:%s\n",yytext);
-{MSTR}		printf("\nMSTR:%s\n",yytext);
-{LEE}		printf("\nLEE:%s\n",yytext);
-{GRP}		printf("\nGRP:%s\n",yytext);
-{NULL}		printf("\nNULL:%s\n",yytext);
+{INTt}		{ return(INTt); }
+{RELt}		{ return(RELt); }
+{BOLt}		{ return(BOLt); }
+{CARt}		{ return(CARt); }
+{CADt}		{ return(CADt); }
+{LST}		{ return(LST); }
+{SIS}		{ return(SIS); }
+{SIN}		{ return(SIN); }
+{MNTS}		{ return(MNTS); }
+{HAZ}		{ return(HAZ); }
+{DSD}		{ return(DSD); }
+{HST}		{ return(HST); }
+{MSTR}		{ return(MSTR); }
+{LEE}		{ return(LEE); }
+{GRP}		{ return(GRP); }
+{NULL}		{ return(NULL); }
 
-{ID}		printf("\nID:%s\n",yytext);
-{INT}		printf("\nINT:%s\n",yytext);
-{REL}		printf("\nREL:%s\n",yytext);
-{BOL}		printf("\nBOL:%s\n",yytext);
-{CAR}		printf("\nCAR:%s\n",yytext);
-{CAD}		printf("\nCAD:%s\n",yytext);
+{ID}		{ return(ID); }
+{INT}		{ return(INT); }
+{REL}		{ return(REL); }
+{BOL}		{ return(BOL); }
+{CAR}		{ return(CAR); }
+{CAD}		{ return(CAD); }
 
-{MAS}		printf("\nMAS:%s\n",yytext);
-{MNS}		printf("\nMNS:%s\n",yytext);
-{MLT}		printf("\nMLT:%s\n",yytext);
-{DIV}		printf("\nDIV:%s\n",yytext);
-{RES}		printf("\nRES:%s\n",yytext);
-{POT}		printf("\nPOT:%s\n",yytext);
-{MNR}		printf("\nMNR:%s\n",yytext);
-{MNG}		printf("\nMNG:%s\n",yytext);
-{MYR}		printf("\nMYR:%s\n",yytext);
-{MYG}		printf("\nMYG:%s\n",yytext);
-{CMP}		printf("\nCMP:%s\n",yytext);
-{DIF}		printf("\nDIF:%s\n",yytext);
-{ASG}		printf("\nASG:%s\n",yytext);
-{PYC}		printf("\nPYC:%s\n",yytext);
-{ABRP}		printf("\nABRP:%s\n",yytext);
-{CIEP}		printf("\nCIEP:%s\n",yytext);
-{ABLL}		printf("\nABLL:%s\n",yytext);
-{CILL}		printf("\nCILL:%s\n",yytext);
-{ABRC}		printf("\nABRC:%s\n",yytext);
-{CIEC}		printf("\nCIEC:%s\n",yytext);
-{COMA}		printf("\nCOMA:%s\n",yytext);
-{AND}		printf("\nAND:%s\n",yytext);
-{OR}		printf("\nOR:%s\n",yytext);
-{NOT}		printf("\nNOT:%s\n",yytext);
-{COMM}		printf("\nCOMM:%s\n",yytext);
-{PNT}		printf("\nPNT:%s\n",yytext);
+{MAS}		{ return(MAS); }
+{MNS}		{ return(MNS); }
+{MLT}		{ return(MLT); }
+{DIV}		{ return(DIV); }
+{RES}		{ return(RES); }
+{POT}		{ return(POT); }
+{MNR}		{ return(MNR); }
+{MNG}		{ return(MNG); }
+{MYR}		{ return(MYR); }
+{MYG}		{ return(MYG); }
+{CMP}		{ return(CMP); }
+{DIF}		{ return(DIF); }
+{ASG}		{ return(ASG); }
+{PYC}		{ return(PYC); }
+{ABRP}		{ return(ABRP); }
+{CIEP}		{ return(CIEP); }
+{ABLL}		{ return(ABLL); }
+{CILL}		{ return(CILL); }
+{ABRC}		{ return(ABRC); }
+{CIEC}		{ return(CIEC); }
+{COMA}		{ return(COMA); }
+{AND}		{ return(AND); }
+{OR}		{ return(OR); }
+{NOT}		{ return(NOT); }
+{COMM}		{ return(COMM); }
+{PNT}		{ return(PNT); }
 
 %%
 
