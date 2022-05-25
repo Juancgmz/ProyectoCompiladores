@@ -20,6 +20,7 @@ MSTR	muestra
 LEE		leer
 GRP		grupo
 NULL	null
+PRM		programa
 
 %{
 /*
@@ -84,6 +85,7 @@ PNT		(\.)
 {LEE}		{ return(LEE); }
 {GRP}		{ return(GRP); }
 {NULL}		{ return(NULL); }
+{PRM}		{ return(PRM); }
 
 {ID}		{ return(ID); }
 {INT}		{ return(INT); }
