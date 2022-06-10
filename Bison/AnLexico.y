@@ -30,76 +30,76 @@ int num;
 %left MAS MNS
 %left MLT DIV
 
-%type PGRM GVARS VARS IDS IDX FUNCIONES MAIN PARAMETROSD ESTATUTOS ESTATUTO ASGNCN LCTR SCRT LOOP CNDCN EXCEP FNCN PARAMETROSA COND COMP EXPRSN EXP EX IDA VALOR WHILES FORS TIPO 
+%type pgrm gvars vars ids idx funciones main parametrosd estatutos estatuto asgncn lcrt scrt loop cndcn excep fncn parametrosa cond comp exprsn exp ex ida valor whiles fors tipo agrega veces
 
 %start PGRM
 
 %%
-PGRM 	: PRM ID PYC GVARS FUNCIONES MAIN;
-GVARS 	: VRS VARS;
-VARS 	: TIPO IDS PYC VARS
+pgrm	: PRM ID PYC gvars funciones main;
+gvars	: VRS vars;
+vars	: tipo ids PYC vars
 	| FVRS;
-IDS 	: IDX COMA IDS
-	| IDX;
-IDX 	: LST ID ABRC INT CIEC
-	| ID ABLL PARAMETROSD CILL
+ids	: idx COMA ids
+	| idx;
+idx	: LST ID ABRC INT CIEC
+	| ID ABLL parametrosd CILL
 	| ID;
-FUNCIONES : TIPO ID ABRP PARAMETROSD CIEP VARS ABLL ESTATUTOS | /*EMPTY*/;
-MAIN : MNF ABRP CIEP ABLL ESTATUTOS CILL;
-PARAMETROSD : TIPO ID COMA PARAMETROSD
-	| TIPO ID 
+funciones: tipo ID ABRP parametrosd CIEP vars ABLL estatutos| /*EMPTY*/;
+main: MNF ABRP CIEP ABLL estatutos CILL;
+parametrosd: tipo ID COMA parametrosd
+	| tipo ID 
 	| /*EMPTY*/;
-ESTATUTOS : ESTATUTO ESTATUTOS
+estatutos: estatuto estatutos
 	| /*EMPTY*/;
-ESTATUTO : ASGNCN
-	| LCTR
-	| SCRT 
-	| LOOP
-	| CNDCN
-	| FNCN |  /*EMPTY*/;
-ASGNCN 	: ID ASG EXPRSN PYC;
-LCRT 	: LEE ABRP EXPRSN CIEP PYC;
-SCRT 	: MSTR ABRP EXPRSN CIEP PYC;
-LOOP 	: WHILES
-	| FORS;
-CNDCN 	: SIS ABRP COND CIEP ABLL ESTATUTOS CILL EXCEP;
-EXCEP 	: SIN ABLL ESTATUTOS CILL
+estatuto: ASGNCN
+	| lcrt
+	| scrt
+	| loop
+	| cndcn
+	| fncn|  /*EMPTY*/;
+asgncn 	: ID ASG exprsn PYC;
+lcrt	: LEE ABRP exprsn CIEP PYC;
+scrt	: MSTR ABRP exprsn CIEP PYC;
+loop	: whiles
+	| fors;
+cndcn	: SIS ABRP cond CIEP ABLL estaturos CILL excep;
+excep	: SIN ABLL estatutos CILL
 	| /*EMPTY*/;
-FNCN  	: ID ABRP PARAMETROSA CIEP PYC
-PARAMETROSA : EXPRSN PARAMETROSA
-	| EXPRSN | /*EMPTY*/;
-COND 	: EXPRSN COMP EXPRSN
+fncn	: ID ABRP parametrosa CIEP PYC
+parametrosa: exprsn parametrosa
+	| exprsn| /*EMPTY*/;
+cond	: exprsn comp exprsn
 	| TRUE
 	| FALSE;
-COMP	: MNR
+comp: MNR
 	| MNG
 	| MYR
 	| MYG
 	| CMP
 	| DIF;
-EXPRSN 	: EXP AGREGA EXPRSN
-	| EXP;
-EXP	:EX VECES EXP
-	| EX
-EX	: IDA
-	| FNCN
-	| VALOR
-	| ABRP EXPRSN CIEP;
-IDA	: ID ABRC INT CIEC
+exprsn	: exp agrega exprsn
+	| exp;
+exp	:ex veces exp
+	| ex
+ex	: ida
+	| fncn
+	| valor
+	| ABRP exprsn CIEP;
+ida	: ID ABRC INT CIEC
 	| ID PNT ID
 	| ID;
-VALOR	: CAR
+valor	: CAR
 	| CAD
 	| INT
 	| REL
 	| BOL;
-WHILE 	: MNTS ABRO COND CIEP ABLL ESTATUTOS CILL;
-FORS	: POR ABRP EXPRSN HASTA EXPRSN CIEP ABLL ESTATUTOS CILL;
-TIPO	:INTt
+while	: MNTS ABRO cond CIEP ABLL estatuos CILL;
+fors	: DSD exprsn HASTA exprsn ABLL estatutos CILL;
+tipo	:INTt
 	|CARt
 	|CADt
 	|RELt
 	|GRP
 	|LST;
-
-	
+agrega	:MAS | MNS;
+veces 	:MLT | DIV;
