@@ -1,0 +1,29 @@
+programa prueba;
+
+variables
+num ant, cow, lista piedras[3];
+real val, precio;
+fvars
+
+real suma(num a, num b, real c)
+real h, d;
+fvars
+{
+	h = a + b;
+	d = c;
+	regresa d*h;
+}
+void print(num a, num b)
+fvars
+{
+	muestra(a+b);
+}
+
+main(){
+	leer(cow);
+	leer(ant);
+	precio = suma(cow, ant, 2.3);
+	print(ant, cow);
+	
+}
+

@@ -1,4 +1,15 @@
 %{
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+//#include <conio.h>
+FILE *yyin;
+%}
+
+%option noyywrap
+%option yylineno
+
+%{
 /*
 	PALABRAS RESERVADAS
 */
@@ -21,6 +32,11 @@ LEE		leer
 GRP		grupo
 NULL	null
 PRM		programa
+VRS		variables
+FVRS	fvars
+RTRN 	regresa
+TRU		true
+FAL		false
 
 %{
 /*
@@ -28,12 +44,12 @@ PRM		programa
 */
 %}
 
-ID		[a-z|A-Z]([a-z|A-Z]+|[\d]+)+
-BOL		[0|1]
+BOL		[TRU|FAL]
 INT		[0-9]+
 REL		((\+|-)?([0-9]+)(\.[0-9]+)?)|((\+|-)?\.?[0-9]+)
-CAR		[a-z|A-Z]
-CAD		([a-z|A-Z]*)
+CAR		\'[a-z|A-Z|\d]\'
+CAD		\"[^\n"]*\"
+ID		[a-z|A-Z]([a-z|A-Z|\d])*
 
 %{
 /*
@@ -64,7 +80,7 @@ COMA	(\,)
 AND		(\&)
 OR		[\?]
 NOT		(\!)
-COMM	(\#)
+COMM	(\#[^\n]*)
 PNT		(\.)
 
 %%
@@ -86,13 +102,15 @@ PNT		(\.)
 {GRP}		{ return(GRP); }
 {NULL}		{ return(NULL); }
 {PRM}		{ return(PRM); }
+{VRS}		{ return(VRS); }
+{RTRN}		{ return(RTRN); }
 
-{ID}		{ return(ID); }
 {INT}		{ return(INT); }
 {REL}		{ return(REL); }
 {BOL}		{ return(BOL); }
 {CAR}		{ return(CAR); }
 {CAD}		{ return(CAD); }
+{ID}		{ return(ID); }
 
 {MAS}		{ return(MAS); }
 {MNS}		{ return(MNS); }
@@ -121,12 +139,32 @@ PNT		(\.)
 {COMM}		{ return(COMM); }
 {PNT}		{ return(PNT); }
 
+"\n"
+"\t"
+" "
+.			yyerror();
+
 %%
 
 int yywrap(){
 	return 1;
 }
 
-int main(void){
-	yylex();
+int main(int arg, char *argv[]){
+	if ( (yyin = fopen(argv[1], "rt")) == NULL ){
+		printf("\nNo se puede abrir el archivo %s\n", argv[1]);
+		return 1; 
+	}
+	else{
+		printf("\nEl archivo %s se abrio correctamente\n", argv[1]);
+		yylex();
+	}
+	printf("\nFLEX finalizo la lectura del archivo %s \n", argv[1]);
+	fclose(yyin);
+	return 0;
+}
+
+int yyerror(void){
+	printf("\nError lexico: Caracter invalido: %s, saliendo ...\n", yytext);
+	exit(1);
 }

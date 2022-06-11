@@ -5,18 +5,12 @@ void yyerror(char * s);
 int yyparse();
 %}
 
-
-%union
-
-{
-float real;
-boolean bool;
-char * car;
-null null;
-int num;
+%union {
+	float real;
+	boolean bool;
+	char* car;
+	int num;
 }
-
-
 
 %token <num> INTt
 %token <real> RELt
