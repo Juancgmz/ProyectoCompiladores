@@ -15,8 +15,6 @@ FILE *yyin;
 */
 %}
 
-INTt	num
-RELt	real
 BOLt	bool
 CARt	car
 CADt	cad
@@ -85,8 +83,8 @@ PNT		(\.)
 
 %%
 
-{INTt}		{ return(INTt); }
-{RELt}		{ return(RELt); }
+"num"		{ return INTt; }
+"real"		{ return RELt; }
 {BOLt}		{ return(BOLt); }
 {CARt}		{ return(CARt); }
 {CADt}		{ return(CADt); }
@@ -153,7 +151,7 @@ int yywrap(){
 int main(int arg, char *argv[]){
 	if ( (yyin = fopen(argv[1], "rt")) == NULL ){
 		printf("\nNo se puede abrir el archivo %s\n", argv[1]);
-		return 1; 
+		return 1;
 	}
 	else{
 		printf("\nEl archivo %s se abrio correctamente\n", argv[1]);

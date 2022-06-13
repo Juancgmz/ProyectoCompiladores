@@ -376,8 +376,8 @@ static void yy_fatal_error (yyconst char msg[]  );
 	*yy_cp = '\0'; \
 	(yy_c_buf_p) = yy_cp;
 
-#define YY_NUM_RULES 55
-#define YY_END_OF_BUFFER 56
+#define YY_NUM_RULES 56
+#define YY_END_OF_BUFFER 57
 /* This struct is not used in this scanner,
    but its presence is necessary. */
 struct yy_trans_info
@@ -387,7 +387,7 @@ struct yy_trans_info
 	};
 static yyconst flex_int16_t yy_accept[133] =
     {   0,
-        0,    0,   56,   55,   53,   52,   54,   49,   55,   50,
+        0,    0,   57,   55,   53,   52,   54,   49,   55,   50,
        30,   47,   55,   40,   41,   28,   26,   46,   27,   51,
        29,   20,   39,   32,   38,   34,   48,   22,   25,   44,
        45,   31,   25,   25,   25,   25,   25,   25,   25,   25,
@@ -536,11 +536,11 @@ static yyconst flex_int16_t yy_chk[200] =
     } ;
 
 /* Table of booleans, true if rule could match eol. */
-static yyconst flex_int32_t yy_rule_can_match_eol[56] =
+static yyconst flex_int32_t yy_rule_can_match_eol[57] =
     {   0,
 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 
-    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0,     };
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0,     };
 
 static yy_state_type yy_last_accepting_state;
 static char *yy_last_accepting_cpos;
@@ -556,22 +556,22 @@ int yy_flex_debug = 0;
 #define YY_MORE_ADJ 0
 #define YY_RESTORE_YY_MORE_OFFSET
 char *yytext;
-#line 1 "AnLexico.l"
-#line 2 "AnLexico.l"
+#line 1 "anLexico.l"
+#line 2 "anLexico.l"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 //#include <conio.h>
 FILE *yyin;
-#line 13 "AnLexico.l"
+#line 13 "anLexico.l"
 /*
 	PALABRAS RESERVADAS
 */
-#line 42 "AnLexico.l"
+#line 40 "anLexico.l"
 /*
 	VARIABLES
 */
-#line 55 "AnLexico.l"
+#line 53 "anLexico.l"
 /*
 	SIMBOLOS
 */
@@ -757,7 +757,7 @@ YY_DECL
 	register char *yy_cp, *yy_bp;
 	register int yy_act;
     
-#line 86 "AnLexico.l"
+#line 84 "anLexico.l"
 
 
 #line 764 "lex.yy.c"
@@ -855,281 +855,286 @@ do_action:	/* This label is used only to access EOF actions. */
 
 case 1:
 YY_RULE_SETUP
-#line 88 "AnLexico.l"
-{ return(INTt); }
+#line 86 "anLexico.l"
+{ return INTt; }
 	YY_BREAK
 case 2:
 YY_RULE_SETUP
-#line 89 "AnLexico.l"
-{ return(RELt); }
+#line 87 "anLexico.l"
+{ return RELt; }
 	YY_BREAK
 case 3:
 YY_RULE_SETUP
-#line 90 "AnLexico.l"
+#line 88 "anLexico.l"
 { return(BOLt); }
 	YY_BREAK
 case 4:
 YY_RULE_SETUP
-#line 91 "AnLexico.l"
+#line 89 "anLexico.l"
 { return(CARt); }
 	YY_BREAK
 case 5:
 YY_RULE_SETUP
-#line 92 "AnLexico.l"
+#line 90 "anLexico.l"
 { return(CADt); }
 	YY_BREAK
 case 6:
 YY_RULE_SETUP
-#line 93 "AnLexico.l"
+#line 91 "anLexico.l"
 { return(LST); }
 	YY_BREAK
 case 7:
 YY_RULE_SETUP
-#line 94 "AnLexico.l"
+#line 92 "anLexico.l"
 { return(SIS); }
 	YY_BREAK
 case 8:
 YY_RULE_SETUP
-#line 95 "AnLexico.l"
+#line 93 "anLexico.l"
 { return(SIN); }
 	YY_BREAK
 case 9:
 YY_RULE_SETUP
-#line 96 "AnLexico.l"
+#line 94 "anLexico.l"
 { return(MNTS); }
 	YY_BREAK
 case 10:
 YY_RULE_SETUP
-#line 97 "AnLexico.l"
+#line 95 "anLexico.l"
 { return(HAZ); }
 	YY_BREAK
 case 11:
 YY_RULE_SETUP
-#line 98 "AnLexico.l"
+#line 96 "anLexico.l"
 { return(DSD); }
 	YY_BREAK
 case 12:
 YY_RULE_SETUP
-#line 99 "AnLexico.l"
+#line 97 "anLexico.l"
 { return(HST); }
 	YY_BREAK
 case 13:
 YY_RULE_SETUP
-#line 100 "AnLexico.l"
+#line 98 "anLexico.l"
 { return(MSTR); }
 	YY_BREAK
 case 14:
 YY_RULE_SETUP
-#line 101 "AnLexico.l"
+#line 99 "anLexico.l"
 { return(LEE); }
 	YY_BREAK
 case 15:
 YY_RULE_SETUP
-#line 102 "AnLexico.l"
+#line 100 "anLexico.l"
 { return(GRP); }
 	YY_BREAK
 case 16:
 YY_RULE_SETUP
-#line 103 "AnLexico.l"
+#line 101 "anLexico.l"
 { return(NULL); }
 	YY_BREAK
 case 17:
 YY_RULE_SETUP
-#line 104 "AnLexico.l"
+#line 102 "anLexico.l"
 { return(PRM); }
 	YY_BREAK
 case 18:
 YY_RULE_SETUP
-#line 105 "AnLexico.l"
+#line 103 "anLexico.l"
 { return(VRS); }
 	YY_BREAK
 case 19:
 YY_RULE_SETUP
-#line 106 "AnLexico.l"
+#line 104 "anLexico.l"
 { return(RTRN); }
 	YY_BREAK
 case 20:
 YY_RULE_SETUP
-#line 108 "AnLexico.l"
+#line 106 "anLexico.l"
 { return(INT); }
 	YY_BREAK
 case 21:
 YY_RULE_SETUP
-#line 109 "AnLexico.l"
+#line 107 "anLexico.l"
 { return(REL); }
 	YY_BREAK
 case 22:
 YY_RULE_SETUP
-#line 110 "AnLexico.l"
+#line 108 "anLexico.l"
 { return(BOL); }
 	YY_BREAK
 case 23:
 YY_RULE_SETUP
-#line 111 "AnLexico.l"
+#line 109 "anLexico.l"
 { return(CAR); }
 	YY_BREAK
 case 24:
 YY_RULE_SETUP
-#line 112 "AnLexico.l"
+#line 110 "anLexico.l"
 { return(CAD); }
 	YY_BREAK
 case 25:
 YY_RULE_SETUP
-#line 113 "AnLexico.l"
+#line 111 "anLexico.l"
 { return(ID); }
 	YY_BREAK
 case 26:
 YY_RULE_SETUP
-#line 115 "AnLexico.l"
+#line 113 "anLexico.l"
 { return(MAS); }
 	YY_BREAK
 case 27:
 YY_RULE_SETUP
-#line 116 "AnLexico.l"
+#line 114 "anLexico.l"
 { return(MNS); }
 	YY_BREAK
 case 28:
 YY_RULE_SETUP
-#line 117 "AnLexico.l"
+#line 115 "anLexico.l"
 { return(MLT); }
 	YY_BREAK
 case 29:
 YY_RULE_SETUP
-#line 118 "AnLexico.l"
+#line 116 "anLexico.l"
 { return(DIV); }
 	YY_BREAK
 case 30:
 YY_RULE_SETUP
-#line 119 "AnLexico.l"
+#line 117 "anLexico.l"
 { return(RES); }
 	YY_BREAK
 case 31:
 YY_RULE_SETUP
-#line 120 "AnLexico.l"
+#line 118 "anLexico.l"
 { return(POT); }
 	YY_BREAK
 case 32:
 YY_RULE_SETUP
-#line 121 "AnLexico.l"
+#line 119 "anLexico.l"
 { return(MNR); }
 	YY_BREAK
 case 33:
 YY_RULE_SETUP
-#line 122 "AnLexico.l"
+#line 120 "anLexico.l"
 { return(MNG); }
 	YY_BREAK
 case 34:
 YY_RULE_SETUP
-#line 123 "AnLexico.l"
+#line 121 "anLexico.l"
 { return(MYR); }
 	YY_BREAK
 case 35:
 YY_RULE_SETUP
-#line 124 "AnLexico.l"
+#line 122 "anLexico.l"
 { return(MYG); }
 	YY_BREAK
 case 36:
 YY_RULE_SETUP
-#line 125 "AnLexico.l"
+#line 123 "anLexico.l"
 { return(CMP); }
 	YY_BREAK
 case 37:
 YY_RULE_SETUP
-#line 126 "AnLexico.l"
+#line 124 "anLexico.l"
 { return(DIF); }
 	YY_BREAK
 case 38:
 YY_RULE_SETUP
-#line 127 "AnLexico.l"
+#line 125 "anLexico.l"
 { return(ASG); }
 	YY_BREAK
 case 39:
 YY_RULE_SETUP
-#line 128 "AnLexico.l"
+#line 126 "anLexico.l"
 { return(PYC); }
 	YY_BREAK
 case 40:
 YY_RULE_SETUP
-#line 129 "AnLexico.l"
+#line 127 "anLexico.l"
 { return(ABRP); }
 	YY_BREAK
 case 41:
 YY_RULE_SETUP
-#line 130 "AnLexico.l"
+#line 128 "anLexico.l"
 { return(CIEP); }
 	YY_BREAK
 case 42:
 YY_RULE_SETUP
-#line 131 "AnLexico.l"
+#line 129 "anLexico.l"
 { return(ABLL); }
 	YY_BREAK
 case 43:
 YY_RULE_SETUP
-#line 132 "AnLexico.l"
+#line 130 "anLexico.l"
 { return(CILL); }
 	YY_BREAK
 case 44:
 YY_RULE_SETUP
-#line 133 "AnLexico.l"
+#line 131 "anLexico.l"
 { return(ABRC); }
 	YY_BREAK
 case 45:
 YY_RULE_SETUP
-#line 134 "AnLexico.l"
+#line 132 "anLexico.l"
 { return(CIEC); }
 	YY_BREAK
 case 46:
 YY_RULE_SETUP
-#line 135 "AnLexico.l"
+#line 133 "anLexico.l"
 { return(COMA); }
 	YY_BREAK
 case 47:
 YY_RULE_SETUP
-#line 136 "AnLexico.l"
+#line 134 "anLexico.l"
 { return(AND); }
 	YY_BREAK
 case 48:
 YY_RULE_SETUP
-#line 137 "AnLexico.l"
+#line 135 "anLexico.l"
 { return(OR); }
 	YY_BREAK
 case 49:
 YY_RULE_SETUP
-#line 138 "AnLexico.l"
+#line 136 "anLexico.l"
 { return(NOT); }
 	YY_BREAK
 case 50:
 YY_RULE_SETUP
-#line 139 "AnLexico.l"
+#line 137 "anLexico.l"
 { return(COMM); }
 	YY_BREAK
 case 51:
 YY_RULE_SETUP
-#line 140 "AnLexico.l"
+#line 138 "anLexico.l"
 { return(PNT); }
 	YY_BREAK
 case 52:
 /* rule 52 can match eol */
 YY_RULE_SETUP
-#line 142 "AnLexico.l"
+#line 140 "anLexico.l"
 
 	YY_BREAK
 case 53:
 YY_RULE_SETUP
-#line 143 "AnLexico.l"
+#line 141 "anLexico.l"
 
 	YY_BREAK
 case 54:
 YY_RULE_SETUP
-#line 144 "AnLexico.l"
+#line 142 "anLexico.l"
 
 	YY_BREAK
 case 55:
 YY_RULE_SETUP
-#line 147 "AnLexico.l"
+#line 143 "anLexico.l"
+yyerror();
+	YY_BREAK
+case 56:
+YY_RULE_SETUP
+#line 145 "anLexico.l"
 ECHO;
 	YY_BREAK
-#line 1133 "lex.yy.c"
+#line 1138 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -2138,7 +2143,7 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 147 "AnLexico.l"
+#line 145 "anLexico.l"
 
 
 
@@ -2149,7 +2154,7 @@ int yywrap(){
 int main(int arg, char *argv[]){
 	if ( (yyin = fopen(argv[1], "rt")) == NULL ){
 		printf("\nNo se puede abrir el archivo %s\n", argv[1]);
-		return 1; 
+		return 1;
 	}
 	else{
 		printf("\nEl archivo %s se abrio correctamente\n", argv[1]);
@@ -2160,4 +2165,8 @@ int main(int arg, char *argv[]){
 	return 0;
 }
 
+int yyerror(void){
+	printf("\nError lexico: Caracter invalido: %s, saliendo ...\n", yytext);
+	exit(1);
+}
 
